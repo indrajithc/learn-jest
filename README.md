@@ -58,4 +58,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
       - test fail [red]
       - wite code in function
       -  test success [green]
-  
+  - Why TDD
+    - part of coding process
+    - more efficient
+      - every time make a change test it by already written test code
+      
