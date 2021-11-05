@@ -62,4 +62,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
     - part of coding process
     - more efficient
       - every time make a change test it by already written test code
-      
+- Unit Test
+  - isolated test
+    - only test a function
+- Integration Test
+  - multiple units work together
+- Functional testing
+  - tests a particular functionality 
+    - test the function behavior      
+- Acceptance / End-to-end [E2E] test
+  - actual browser test with sever 
