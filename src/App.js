@@ -12,6 +12,7 @@ function App() {
   return (
     <div>
       <button style={{ backgroundColor: buttonColor }} onClick={clickHandler} >Change to {newButtonColor}</button>
+      <input type="checkbox" />
     </div>)
 };
 
