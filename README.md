@@ -67,8 +67,31 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
     - only test a function
 - Integration Test
   - multiple units work together
+  - interaction between components / different micro services
 - Functional testing
   - tests a particular functionality 
     - test the function behavior      
+  - general behavior of the software 
+    - form filling and submit test behavior 
+      - invalid form entry showing error can be unit testing and also be a functional testing
+
 - Acceptance / End-to-end [E2E] test
   - actual browser test with sever 
+
+**Functional testing vs Unit testing** [ section 1:7]
+- Unit testing
+  - isolated 
+    - mock all dependencies
+      - easy to identify the failed test 
+      - easy to pinpoint failure [know where to look]
+      - les tightly coupled  
+      - more likely to break with refactoring 
+        - small change test might fail but software still working as expected [ con]
+- Functional testing
+  - Different mindset
+  - Particular behavior or user flow
+  - close to user flow
+  - tests are robust
+    - as log as the behavior stays it will pass
+  - difficult to pinpoint the failure section  
+
