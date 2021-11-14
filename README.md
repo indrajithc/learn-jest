@@ -95,3 +95,24 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
     - as log as the behavior stays it will pass
   - difficult to pinpoint the failure section  
 
+**TDD vs BDD**
+- BBD
+  - user behavior / behavior testing
+  - explicitly defined 
+    - includes QA , client etc
+
+**Accessability**
+- https://testing-library.com/docs/queries/about/#priority
+- Priority
+  - Query accessible to everyone
+    - getByRole
+    - getByLabelText
+    - getByPlaceholderText
+    - getByText
+    - getByDisplayValues
+  - Sematic queries
+    - getByAltText
+    - getByTitle
+  - TestIds
+    - getByTestId
+
