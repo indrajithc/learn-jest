@@ -31,6 +31,7 @@ function App() {
         area-checked={buttonDisabled ? "true" : "false"}
         onChange={changeHandler}
       />
+      <label htmlFor="enable-button-checkbox">Disable button</label>
     </div>)
 };
 

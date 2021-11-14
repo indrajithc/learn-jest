@@ -36,7 +36,7 @@ test('Button enable and disable via checkbox toggle', () => {
   render(<App />);
 
   const colorButton = screen.getByRole('button', { name: 'Change to blue' });
-  const checkbox = screen.getByRole('checkbox');
+  const checkbox = screen.getByRole('checkbox', { name : 'Disable button'});
 
   // check checkbox
   fireEvent.click(checkbox);
