@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+export const replaceCamelWithSpaces = ( colorName )=> {
+  
+}
+
 function App() {
   const [buttonColor, setButtonColor] = useState('red');
   const [buttonDisabled, setButtonDisabled] = useState(false);
