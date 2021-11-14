@@ -24,7 +24,13 @@ function App() {
         onClick={clickHandler}
         disabled={buttonDisabled}
       >Change to {newButtonColor}</button>
-      <input onChange={changeHandler} type="checkbox" />
+      <input
+        type="checkbox"
+        id="enable-button-checkbox"
+        defaultChecked={buttonDisabled}
+        area-checked={buttonDisabled}
+        onChange={changeHandler}
+      />
     </div>)
 };
 
