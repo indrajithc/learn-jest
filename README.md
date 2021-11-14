@@ -115,4 +115,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
     - getByTitle
   - TestIds
     - getByTestId
+- Role
+  - https://www.w3.org/TR/wai-aria/#role_definitions
+  
 
