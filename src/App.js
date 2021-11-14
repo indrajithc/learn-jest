@@ -28,7 +28,7 @@ function App() {
         type="checkbox"
         id="enable-button-checkbox"
         defaultChecked={buttonDisabled}
-        area-checked={buttonDisabled}
+        area-checked={buttonDisabled ? "true" : "false"}
         onChange={changeHandler}
       />
     </div>)
