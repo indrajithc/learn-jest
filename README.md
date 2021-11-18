@@ -119,3 +119,14 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
   - https://www.w3.org/TR/wai-aria/#role_definitions
   
 
+**Linter and Formatter**
+
+- **Linter**
+  - analyzes static text 
+    - basic errors
+- **Formatter**
+  - formatting the code
+    - indentations 
+
+**ESLint Prettier**
+- eslint plugin rules 
