@@ -1,5 +1,6 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import SummaryForm from "../SummaryForm";
+import userEvent from "@testing-library/user-event"
 
 test("Initial condition", () => {
   render(<SummaryForm />);
@@ -26,13 +27,13 @@ test("Conform order button enables only if terms and condition checked", () => {
   expect(orderConfirmButton).toBeDisabled();
 
   // toggle checkbox
-  fireEvent.click(termsAndConditionCheckbox);
+  userEvent.click(termsAndConditionCheckbox);
 
   // expect button enabled when terms and condition enabled 
   expect(orderConfirmButton).toBeEnabled();
 
   // toggle checkbox to not agree terms and condition
-  fireEvent.click(termsAndConditionCheckbox);
+  userEvent.click(termsAndConditionCheckbox);
 
   // expect order confirmation button to be disabled
   expect(orderConfirmButton).toBeDisabled();
