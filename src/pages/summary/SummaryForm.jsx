@@ -4,6 +4,11 @@ import { Form, Button } from "react-bootstrap"
 const SummaryForm = () => {
   const [tcChecked, setTcChecked] = useState(false);
 
+  /**
+   * This function is sued to handle terms and condition checkbox toggle
+   * @param {Event} event 
+   * @returns 
+   */
   const handleTermsAndConditionToggle = (event) => setTcChecked(event.target.checked);
 
   return (<Form>
