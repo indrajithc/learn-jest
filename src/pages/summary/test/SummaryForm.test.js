@@ -39,3 +39,24 @@ test("Conform order button enables only if terms and condition checked", () => {
   expect(orderConfirmButton).toBeDisabled();
 
 })
+
+test("Popover responds on user mouse hover", () => {
+  render(<SummaryForm />);
+
+  // initially popover starts out hidden
+  const nulPopover = screen.queryByText(/no ice cream will actually be delivered/i);
+  expect(nulPopover).not.toBeInTheDocument();
+
+  // popover appears upon mouse over of checkbox label
+  const termsAndCondition = screen.getByText(/terms and conditions/i);
+  userEvent.hover(termsAndCondition);
+
+  const popover = screen.getByText(/no ice cream will actually be delivered/i);
+  expect(popover).toBeInTheDocument();
+
+  // popover disappears when we mouse out
+  userEvent.unhover(termsAndCondition);
+  const nullPopoverAgain = screen.getByText(/no ice cream will actually be delivered/i);
+  expect(nullPopoverAgain).not.toBeInTheDocument();
+
+});
