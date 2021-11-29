@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitForElementToBeRemoved } from "@testing-library/react";
 import SummaryForm from "../SummaryForm";
 import userEvent from "@testing-library/user-event"
 
@@ -40,7 +40,7 @@ test("Conform order button enables only if terms and condition checked", () => {
 
 })
 
-test("Popover responds on user mouse hover", () => {
+test("Popover responds on user mouse hover", async () => {
   render(<SummaryForm />);
 
   // initially popover starts out hidden
@@ -56,7 +56,6 @@ test("Popover responds on user mouse hover", () => {
 
   // popover disappears when we mouse out
   userEvent.unhover(termsAndCondition);
-  const nullPopoverAgain = screen.getByText(/no ice cream will actually be delivered/i);
-  expect(nullPopoverAgain).not.toBeInTheDocument();
+  await waitForElementToBeRemoved(() => screen.getByText(/no ice cream will actually be delivered/i));
 
 });
