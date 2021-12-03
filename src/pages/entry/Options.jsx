@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Row } from "react-bootstrap";
 import ScoopOptions from "./ScoopOptions";
 import ToppingOptions from "./ToppingOptions";
-import { Row } from "react-bootstrap";
+import AlertBanner from "../common/AlertBanner";
 
 const Options = (props) => {
   const { optionType } = props;
 
   const [items, setItems] = useState([]);
+  const [error, setError] = useState(false);
 
   // optionType is 'scoops' or 'toppings' 
   useEffect(() => {
@@ -15,7 +17,7 @@ const Options = (props) => {
       .get(`http://localhost:3030/${optionType}`)
       .then(response => setItems(response.data))
       .catch(error => {
-        // TODO: handle error response
+        setError(error);
       });
   }, [optionType]);
 
@@ -28,6 +30,10 @@ const Options = (props) => {
     name={item.name}
     magePath={item.imagePath}
   />);
+
+  if (error) {
+    return <AlertBanner />
+  }
 
   return <Row>
     {optionItems}
