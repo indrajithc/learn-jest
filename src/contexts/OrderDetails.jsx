@@ -28,12 +28,12 @@ export function OrderDetailsProvider(props) {
   });
 
   const calculateSubtotal = useCallback((optionType, optionCounts) => {
-    let optionCounts = 0;
+    let optionCount = 0;
     for (const count of optionCounts[optionType].values()) {
-      optionCounts += count;
+      optionCount += count;
     }
 
-    return optionCounts * pricePerItem[optionType];
+    return optionCount * pricePerItem[optionType];
   }, [])
 
   useEffect(() => {
